@@ -6,7 +6,7 @@ networks:
       name: nodehome-net
 
 services:
-  svm.4intel.net:
+  nodehome.io:
     container_name: nodehome.io
     image: {docker account}/{image name}:0.1
     working_dir: /home/webapps
