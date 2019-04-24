@@ -7,7 +7,7 @@ networks:
 
 services:
   svm.4intel.net:
-    container_name: svm.4intel.net
+    container_name: nodehome.io
     image: {docker account}/{image name}:0.1
     working_dir: /home/webapps
     command : /opt/tomcat/bin/catalina.sh run

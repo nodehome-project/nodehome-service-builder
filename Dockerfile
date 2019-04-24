@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-MAINTAINER 4intel.net <support@4intel.net>
+MAINTAINER nodehome.io <support@nodehome.io>
 
 ENV TOMCAT_VERSION 8.5.40
 
