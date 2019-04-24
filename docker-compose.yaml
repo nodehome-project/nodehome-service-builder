@@ -12,9 +12,9 @@ services:
     working_dir: /home/webapps
     command : /opt/tomcat/bin/catalina.sh run
     volumes:
-    - ./tomcat/conf/server.xml:/opt/tomcat/conf/server.xml
-    - ./source/WEB-INF/hosts/:/home/webapps/NodeHome-Platform-SVM/WEB-INF/hosts/
-    - ./source/WEB-INF/classes/resources/props/globals.properties:/home/webapps/NodeHome-Platform-SVM/WEB-INF/classes/resources/props/globals.properties
+    - ./config/tomcat/conf/server.xml:/opt/tomcat/conf/server.xml
+    - ./config/hosts/:/home/webapps/NodeHome-Platform-SVM/WEB-INF/hosts/
+    - ./config/globals.properties:/home/webapps/NodeHome-Platform-SVM/WEB-INF/classes/resources/props/globals.properties
     ports:
       - 8080:8080
     networks:

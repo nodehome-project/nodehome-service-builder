@@ -46,7 +46,7 @@ rm /tmp/tomcat.tgz
 #rm -rf /opt/tomcat/webapps/ROOT
 
 # Add admin/admin user
-ADD tomcat-users.xml /opt/tomcat/conf/
+# ADD tomcat-users.xml /opt/tomcat/conf/
 
 # Copy source
 ADD source/ /home/webapps/NodeHome-Platform-SVM/
