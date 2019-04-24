@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 MAINTAINER 4intel.net <support@4intel.net>
 
-ENV TOMCAT_VERSION 8.5.39
+ENV TOMCAT_VERSION 8.5.40
 
 # Fix sh
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
