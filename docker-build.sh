@@ -1,6 +1,9 @@
 #/bin/bash
 
 # docker-runner-script
+if [ -d service-runner ]; then
+    rm -rf service-runner
+fi  
 mkdir service-runner
 mkdir service-runner/config
 cp -r ./docker-compose.yaml ./service-runner/docker-compose.yaml
