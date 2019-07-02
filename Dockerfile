@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 MAINTAINER nodehome.io <support@nodehome.io>
 
-ENV TOMCAT_VERSION 8.5.40
+ENV TOMCAT_VERSION 8.5.42
 
 # Fix sh
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
@@ -49,15 +49,19 @@ rm /tmp/tomcat.tgz
 # ADD tomcat-users.xml /opt/tomcat/conf/
 
 # Copy source
-ADD source/ /home/webapps/NodeHome-Platform-SVM/
+ADD source/ /home/nodehome/NodeHome-Platform-SVM/
+ADD nodem/ /home/nodehome/nodem/
+ADD service-run.sh /home/nodehome/service-run.sh
 
 ENV CATALINA_HOME /opt/tomcat
 ENV PATH $PATH:$CATALINA_HOME/bin
 
+EXPOSE 8886
 EXPOSE 8080
 EXPOSE 8009
 VOLUME "/opt/tomcat/webapps"
 WORKDIR /opt/tomcat
 
 # Launch Tomcat
-CMD ["/opt/tomcat/bin/catalina.sh", "run"]
+# CMD cd /home/nodehome/nodem/ && ./run.sh && /opt/tomcat/bin/catalina.sh run
+# CMD ["/home/nodehome/service-run.sh"]

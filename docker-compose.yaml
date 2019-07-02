@@ -9,13 +9,16 @@ services:
   nodehome.io:
     container_name: nodehome.io
     image: {docker account}/{image name}:0.1
-    working_dir: /home/webapps
-    command : /opt/tomcat/bin/catalina.sh run
+    working_dir: /home/nodehome
+    command : /home/nodehome/service-run.sh
     volumes:
     - ./config/tomcat/conf/server.xml:/opt/tomcat/conf/server.xml
-    - ./config/hosts/:/home/webapps/NodeHome-Platform-SVM/WEB-INF/hosts/
-    - ./config/globals.properties:/home/webapps/NodeHome-Platform-SVM/WEB-INF/classes/resources/props/globals.properties
+    - ./config/tomcat/logs/:/opt/tomcat/logs/
+    - ./config/hosts/:/home/nodehome/NodeHome-Platform-SVM/WEB-INF/hosts/
+    - ./config/globals.properties:/home/nodehome/NodeHome-Platform-SVM/WEB-INF/classes/resources/props/globals.properties
+    - ../service-run.sh:/home/nodehome/service-run.sh
     ports:
-      - 8080:8080
+      - "12011:8080"
+      - "18886:8886"
     networks:
       - nodehome-net
