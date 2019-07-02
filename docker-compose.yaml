@@ -16,7 +16,6 @@ services:
     - ./config/tomcat/logs/:/opt/tomcat/logs/
     - ./config/hosts/:/home/nodehome/NodeHome-Platform-SVM/WEB-INF/hosts/
     - ./config/globals.properties:/home/nodehome/NodeHome-Platform-SVM/WEB-INF/classes/resources/props/globals.properties
-    - ../service-run.sh:/home/nodehome/service-run.sh
     ports:
       - "12011:8080"
       - "18886:8886"
