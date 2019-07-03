@@ -13,7 +13,7 @@ fi
 
 if [ "$1" == "start" ];  then
   CheckNetwork
-  docker-compose -f docker-compose.yaml up -d
+  docker-compose -p {project-name} -f docker-compose.yaml up -d
 elif [ "$1" == "stop" ];  then
-  docker-compose -f docker-compose.yaml down
+  docker-compose -p {project-name} -f docker-compose.yaml down
 fi
