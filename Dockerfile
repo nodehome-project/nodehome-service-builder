@@ -51,6 +51,7 @@ rm /tmp/tomcat.tgz
 # Copy source
 ADD source/ /home/nodehome/NodeHome-Platform-SVM/
 ADD nodem/ /home/nodehome/nodem/
+ADD sigtool/ /home/nodehome/sigtool/
 ADD service-run.sh /home/nodehome/service-run.sh
 
 ENV CATALINA_HOME /opt/tomcat
