@@ -17,7 +17,7 @@ services:
     - ./config/hosts/:/home/nodehome/NodeHome-Platform-SVM/WEB-INF/hosts/
     - ./config/props/:/home/nodehome/NodeHome-Platform-SVM/WEB-INF/classes/resources/props/
     ports:
-      - "NODEHOME_PORT:8080"
-      - "NODEHOME_NODEM_PORT:8886"
+      - "8080:8080"
+      - "18886:8886"
     networks:
       - nodehome-net
