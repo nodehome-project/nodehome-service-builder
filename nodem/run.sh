@@ -10,5 +10,5 @@ LogFolder=/home/nodehome/nodem/log
 LogLink=$LogFolder"/nodem.TRACE"
 
 #/home/nodehome/nodem/nodem -h -e -v -etime 600 -htime 300 -flog  &
-/home/nodehome/nodem/nodem -v -etime 600 -htime 300 -flog -x nodehome
+/home/nodehome/nodem/nodem -v -etime 600 -htime 300 -flog -x nodehome & 
 # tail -f $LogLink
