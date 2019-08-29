@@ -10,6 +10,10 @@ RUN ln -s /usr/local/tomcat /opt/tomcat
 
 # Copy source
 ADD source/ /home/nodehome/NodeHome-Platform-SVM/
+<<<<<<< HEAD
+=======
+ADD tools/nodem /usr/local/bin/nodem
+>>>>>>> 7d2293e85b4cc82c7d0475587bb932b38d38789e
 ADD tools/sigtool/ /home/nodehome/sigtool/
 ADD tools/nodem /usr/local/bin/nodem
 ADD tools/service-run.sh /usr/local/bin/service-run.sh
