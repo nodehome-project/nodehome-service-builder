@@ -10,7 +10,7 @@ services:
     container_name: svm.nodehome.io
     image: nodehome/svm:0.1
     working_dir: /home/nodehome
-    command : /home/nodehome/service-run.sh
+    command : /usr/local/bin/service-run.sh
     volumes:
     - ./config/tomcat/conf/server.xml:/opt/tomcat/conf/server.xml
     - ./config/tomcat/logs/:/opt/tomcat/logs/

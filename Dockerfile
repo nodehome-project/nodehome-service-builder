@@ -10,9 +10,9 @@ RUN ln -s /usr/local/tomcat /opt/tomcat
 
 # Copy source
 ADD source/ /home/nodehome/NodeHome-Platform-SVM/
-ADD tools/nodem /user/local/bin/nodem
 ADD tools/sigtool/ /home/nodehome/sigtool/
-ADD service-run.sh /home/nodehome/service-run.sh
+ADD tools/nodem /usr/local/bin/nodem
+ADD tools/service-run.sh /usr/local/bin/service-run.sh
 
 ENV CATALINA_HOME /opt/tomcat
 ENV PATH $PATH:$CATALINA_HOME/bin
@@ -24,5 +24,5 @@ VOLUME "/opt/tomcat/webapps"
 WORKDIR /opt/tomcat
 
 # Launch Tomcat
-# CMD cd /home/nodehome/nodem/ && ./run.sh && /opt/tomcat/bin/catalina.sh run
-# CMD ["/home/nodehome/service-run.sh"]
+# CMD cd /usr/local/bin/ && nodem && /opt/tomcat/bin/catalina.sh run
+# CMD ["/usr/local/bin/service-run.sh"]
