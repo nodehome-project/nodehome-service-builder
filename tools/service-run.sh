@@ -1,4 +1,4 @@
-#!/bin/sh
+#/bin/bash
 
 nodem -x `date +\%Y\%m\%d\%H\%M\%S` &
 

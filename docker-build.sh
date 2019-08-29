@@ -8,7 +8,7 @@ mkdir service-runner
 mkdir service-runner/config
 cp -r ./docker-compose.yaml ./service-runner/docker-compose.yaml
 cp -r ./docker-run.sh ./service-runner/docker-run.sh
-cp -r ./tomcat ./service-runner/config/tomcat
+cp -r ./tools/tomcat ./service-runner/config/tomcat
 cp -r ./source/WEB-INF/hosts ./service-runner/config/hosts
 cp -r ./source/WEB-INF/classes/resources/props ./service-runner/config/props
 
